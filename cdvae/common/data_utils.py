@@ -824,7 +824,8 @@ def get_scaler_from_data_list(data_list, key):
     return scaler
 
 
-def parse_prop(item: str | float):
+# def parse_prop(item: str | float):
+def parse_prop(item):
     if isinstance(item, (float, int, np.generic)):
         return item
     elif isinstance(item, str):
