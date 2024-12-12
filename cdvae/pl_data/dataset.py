@@ -81,7 +81,8 @@ class CrystDataset(Dataset):
             p: prop_scaler.transform(
                 torch.tensor(data_dict[p], dtype=torch.get_default_dtype()).view(1, -1)
             )
-            for p, prop_scaler in zip(self.prop, self.prop_scalers, strict=True)
+            for p, prop_scaler in zip(self.prop, self.prop_scalers # , strict=True ## TypeError: zip() takes no keyword arguments
+                                      )
         }
 
         (
